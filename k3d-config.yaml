@@ -1,0 +1,11 @@
+apiVersion: k3d.io/v1alpha2
+kind: Simple
+name: NextGen
+servers: 3
+agents: 4
+ports:
+  - port: 80:80
+  - port: 443:443
+    nodeFilters:
+    - loadbalancer
+
